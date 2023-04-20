@@ -1,6 +1,8 @@
 # Basic operations calculator
-from sum import sum
+from Operations import sum
 import math as m
+
+
 # Presentation message
 Mensaje_inicial = "Simple calculator with the following operations available: \n"
 Fila_Operaciones = """1. Sum of integers numbers
@@ -13,25 +15,12 @@ Fila_Operaciones = """1. Sum of integers numbers
  8. Fahrenheit or Kelvin to Celcius  \n"""
 print(Mensaje_inicial, Fila_Operaciones)
 
-
-# def sum(cantidad_numeros, cont1):
-#   suma = 0
-#    while cont1 <= cantidad_numeros:
-#         frase_suma = f"""Enter variable {cont1}: """
-#         number1 = float(input(frase_suma))
-#         suma += number1
-#         cont1 += 1
-
-#     return suma
-
-
 # Infinite operation cycle
 continuar = ""
 while continuar != "no":
     operacion = int(input("Enter the operation's number to perform: "))
     # Addition and subtraction
     if operacion == 1:
-        # from sum import sum
         Total_sum = sum(
             int(input("Enter the quantitie of variables: ")), 1)
         print("The total sum is:", Total_sum)
@@ -87,10 +76,10 @@ while continuar != "no":
         print(f"{pounds} pound are {kilos} kilos")
     # Fahrenheit or Kelvin to Celcius
     if operacion == 8:
+        temp = float(input("Enter the temperature: "))
         farorkel = input(
             "Enter 'F' or 'K' if you want to convert Fahrenheit (F) or Kelvin (K) to Celcius: ")
-        temp = float(input("Enter the temperature: "))
-        while farorkel != "K" and farorkel != "F":
+        while farorkel not in ("K", "F"):
             farorkel = input("Error. Enter 'F' or 'K': ")
         if farorkel == "K":
             celcius = temp - 273.15
