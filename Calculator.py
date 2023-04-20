@@ -1,17 +1,29 @@
 # Basic operations calculator
-
+from sum import sum
 import math as m
 # Presentation message
 Mensaje_inicial = "Simple calculator with the following operations available: \n"
-Fila_Operaciones = """1. Sum of integers numbers 
- 2. Multiplication 
- 3. Divide 
- 4. Hypotenuse 
- 5. Degrees to radians 
- 6. Inch to centimeters 
- 7. Pounds to kilos 
+Fila_Operaciones = """1. Sum of integers numbers
+ 2. Multiplication
+ 3. Divide
+ 4. Hypotenuse
+ 5. Degrees to radians
+ 6. Inch to centimeters
+ 7. Pounds to kilos
  8. Fahrenheit or Kelvin to Celcius  \n"""
 print(Mensaje_inicial, Fila_Operaciones)
+
+
+# def sum(cantidad_numeros, cont1):
+#   suma = 0
+#    while cont1 <= cantidad_numeros:
+#         frase_suma = f"""Enter variable {cont1}: """
+#         number1 = float(input(frase_suma))
+#         suma += number1
+#         cont1 += 1
+
+#     return suma
+
 
 # Infinite operation cycle
 continuar = ""
@@ -19,16 +31,10 @@ while continuar != "no":
     operacion = int(input("Enter the operation's number to perform: "))
     # Addition and subtraction
     if operacion == 1:
-        cantidad_numeros = int(
-            input("Enter the quantitie of variables: "))
-        cont1 = 1
-        suma = 0
-        while cont1 <= cantidad_numeros:
-            frase_suma = f"""Enter variable {cont1}: """
-            n1 = float(input(frase_suma))
-            suma += n1
-            cont1 += 1
-        print("The total sum is: ", suma)
+        # from sum import sum
+        Total_sum = sum(
+            int(input("Enter the quantitie of variables: ")), 1)
+        print("The total sum is:", Total_sum)
     # Multiplication
     if operacion == 2:
         cantidad_numeros2 = int(
