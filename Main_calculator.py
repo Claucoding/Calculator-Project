@@ -1,5 +1,5 @@
 # Basic operations calculator
-from Operations import sum
+from Operations import sum, multi, div
 import math as m
 
 
@@ -26,33 +26,13 @@ while continuar != "no":
         print("The total sum is:", Total_sum)
     # Multiplication
     if operacion == 2:
-        cantidad_numeros2 = int(
-            input("Enter the quantitie of variables: "))
-        cont2 = 1
-        multi = 1
-        while cont2 <= cantidad_numeros2:
-            frase_multi = f"""Enter variable {cont2}: """
-            n2 = float(input(frase_multi))
-            multi *= n2
-            cont2 += 1
-        print("The total multiplication is: ", multi)
+        Total_multi = multi(
+            int(input("Enter the quantitie of variables: ")), 1)
+        print("The total multiplication is: ", Total_multi)
     # Divide
     if operacion == 3:
-        numerador = float(input("Enter the numerator: "))
-        denominador = float(input("Ingrese The denominator: "))
-        condicion = input(
-            "Do you want to know the rest of division? yes/no: ")
-        while condicion != "yes" and condicion != "no":
-            condicion = input(
-                "ERROR. Enter yes or no: ")
-        if condicion == "yes":
-            division = numerador / denominador
-            resto = numerador % denominador
-            print(" The division result is:",
-                  division, "and its rest is:", resto)
-        if condicion == "no":
-            division = numerador / denominador
-            print("The division result is: ", division)
+        Div = div(float(input("Enter the numerator: ")),
+                  float(input("Ingrese The denominator: ")))
     # Hypotenuse
     if operacion == 4:
         cateto1 = float(input("Enter the adjacent cathetus: "))
