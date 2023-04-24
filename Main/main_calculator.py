@@ -1,7 +1,6 @@
-# Basic operations  calculator
+"""Basic operations  calculator"""
 
 import operations as O
-
 
 # Presentation message
 MENSAJE_INICIAL = "Simple calculator with the following operations available: \n"
