@@ -1,5 +1,6 @@
 # Basic operations  calculator
-# import sys  # Allows to import functions from other folders
+
+import sys  # Allows to import functions from other folders
 import operations as O
 
 
