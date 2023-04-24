@@ -1,6 +1,6 @@
 """Basic operations  calculator"""
 
-import operations as O
+import operations as o
 
 # Presentation message
 MENSAJE_INICIAL = "Simple calculator with the following operations available: \n"
@@ -21,42 +21,42 @@ while CONTINUE != "no":
 
     # Integer sum
     if operacion == 1:
-        Total_sum = O.integer_sum(
+        Total_sum = o.integer_sum(
             int(input("Enter the quantitie of variables: ")), 1)
         print("The total sum is:", Total_sum)
 
     # Multiplication
     if operacion == 2:
-        Total_multi = O.multi(
+        Total_multi = o.multi(
             int(input("Enter the quantitie of variables: ")), 1)
         print("The total multiplication is: ", Total_multi)
 
     # Divide
     if operacion == 3:
-        O.div(float(input("Enter a numerator: ")),
+        o.div(float(input("Enter a numerator: ")),
               float(input("Enter a denominator: ")))
 
     # Hypotenuse
     if operacion == 4:
-        hipotenusa = O.hypotenuse(float(input("Enter the adjacent cathetus: ")), float(
+        hipotenusa = o.hypotenuse(float(input("Enter the adjacent cathetus: ")), float(
             input("Ingrese el valor del opposite cathetus: ")))
         print("The hypotenuse is:", hipotenusa)
 
     # Degree to radians
     if operacion == 5:
-        O.deg_to_rad(float(input("Enter the degrees: ")))
+        o.deg_to_rad(float(input("Enter the degrees: ")))
 
     # Inch to centimeters
     if operacion == 6:
-        O.inch_to_cent(float(input("Enter the number of inches: ")))
+        o.inch_to_cent(float(input("Enter the number of inches: ")))
 
     # Pounds to kilos
     if operacion == 7:
-        O.pound_to_kilos(float(input("Enter the pounds: ")))
+        o.pound_to_kilos(float(input("Enter the pounds: ")))
 
     # Fahrenheit or Kelvin to Celcius
     if operacion == 8:
-        O.farkel_to_cel(float(input("Enter the temperature: ")),
+        o.farkel_to_cel(float(input("Enter the temperature: ")),
                         input(
             "Enter 'F' or 'K' if you want to convert Fahrenheit (F) or Kelvin (K) to Celcius: "))
 
