@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": ".venv\\Scripts\\python.exe",
+    "python.autoComplete.extraPaths": [
+        "./Main"
+    ],
+    "python.analysis.extraPaths": [
+        "./Main"
+    ]
+}
